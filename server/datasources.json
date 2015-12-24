@@ -10,7 +10,7 @@
     "port": 3306,
     "database": "vBlogDB",
     "username": "blogAdmin",
-    "password": "Nvane1017"
+    "password": "12345"
   },
   "projectFile": {
     "name": "projectFile",
