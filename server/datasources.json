@@ -4,13 +4,13 @@
     "connector": "memory"
   },
   "mysql": {
-    "name": "mysql",
-    "connector": "mysql",
     "host": "localhost",
     "port": 3306,
     "database": "vBlogDB",
     "username": "blogAdmin",
-    "password": "Nvane1017"
+    "password": "Nvane1017",
+    "name": "mysql",
+    "connector": "mysql"
   },
   "projectFile": {
     "name": "projectFile",

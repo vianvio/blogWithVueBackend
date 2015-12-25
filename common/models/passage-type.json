@@ -1,21 +1,30 @@
 {
-  "name": "userModel",
-  "plural": "userModels",
-  "base": "User",
+  "name": "passageType",
+  "plural": "passageTypes",
+  "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "mixins": {
-    "TimeStamp": true
-  },
   "properties": {
-    "email": {
-      "type": "string"
+    "name": {
+      "type": "string",
+      "required": true
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "owner": {
+      "type": "belongsTo",
+      "model": "userModel",
+      "foreignKey": "ownerId"
+    },
+    "lastUpdatedBy": {
+      "type": "belongsTo",
+      "model": "userModel",
+      "foreignKey": "lastUpdatedById"
+    }
+  },
   "acls": [
     {
       "accessType": "*",

@@ -36,5 +36,13 @@
   "userModel": {
     "dataSource": "mysql",
     "public": true
+  },
+  "passage": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "passageType": {
+    "dataSource": "mysql",
+    "public": true
   }
 }
