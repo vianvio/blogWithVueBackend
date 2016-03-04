@@ -6,4 +6,4 @@ add server/uploads folder
 add client/build folder
 
 # start
-DEBUG=blogBE node .
+DEBUG=blogBE* node .

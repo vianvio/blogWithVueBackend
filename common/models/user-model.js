@@ -5,7 +5,7 @@ module.exports = function(UserModel) {
   UserModel.afterRemote('create', function(ctx, userModel, next) {
     ctx.result = {
       bError: false,
-      message: 'Regist successfully.',
+      message: '注册成功',
       result: userModel
     }
     next();

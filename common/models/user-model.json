@@ -12,6 +12,10 @@
   "properties": {
     "email": {
       "type": "string"
+    },
+    "bDisabled": {
+      "type": "boolean",
+      "default": false
     }
   },
   "validations": [],

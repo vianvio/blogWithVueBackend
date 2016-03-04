@@ -3,10 +3,22 @@ var loopback = require('loopback');
 var boot = require('loopback-boot');
 var path = require('path');
 var debug = require('debug')('blogBE:main');
+var bodyParser = require('body-parser');
+var multer = require('multer');
 
 var app = module.exports = loopback();
 // add another static folder
 // app.use(loopback.static(path.resolve(__dirname, '../client/venderMissed')));
+// app.use(function (req, res, next){
+//   // for alipay
+//   if (req.url === '/paymentNotify') {
+//     req.headers['content-type'] = 'application/x-www-form-urlencoded';
+//   }
+//   next();
+// });
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(multer().array());
 
 app.start = function() {
   // start the web server

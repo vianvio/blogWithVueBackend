@@ -13,6 +13,10 @@
   "properties": {
     "content": {
       "type": "string"
+    },
+    "bDisabled": {
+      "type": "boolean",
+      "default": false
     }
   },
   "validations": [],
@@ -33,19 +37,30 @@
       "foreignKey": "passageTypeId"
     }
   },
-  "acls": [
-    {
+  "acls": [{
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "DENY"
-    },
-    {
+    }, {
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "$authenticated",
       "permission": "ALLOW"
+    }, {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "find"
+    }, {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "findById"
     }
+
   ],
   "methods": {}
 }
