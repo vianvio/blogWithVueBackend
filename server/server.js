@@ -4,7 +4,6 @@ var boot = require('loopback-boot');
 var path = require('path');
 var debug = require('debug')('blogBE:main');
 var bodyParser = require('body-parser');
-var multer = require('multer');
 
 var app = module.exports = loopback();
 // add another static folder
@@ -18,7 +17,6 @@ var app = module.exports = loopback();
 // });
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(multer().array());
 
 app.start = function() {
   // start the web server
