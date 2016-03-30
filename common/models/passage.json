@@ -11,7 +11,14 @@
     "AddUserInfo": true
   },
   "properties": {
+    "title": {
+      "type": "string"
+    },
     "content": {
+      "type": "string",
+      "dataType": "text"
+    },
+    "tag": {
       "type": "string"
     },
     "bDisabled": {
@@ -31,7 +38,7 @@
       "model": "userModel",
       "foreignKey": "lastUpdatedById"
     },
-    "passageTypeId": {
+    "passageType": {
       "type": "belongsTo",
       "model": "passageType",
       "foreignKey": "passageTypeId"

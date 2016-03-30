@@ -6,6 +6,10 @@
   "options": {
     "validateUpsert": true
   },
+  "mixins": {
+    "TimeStamp": true,
+    "AddUserInfo": true
+  },
   "properties": {
     "name": {
       "type": "string",
