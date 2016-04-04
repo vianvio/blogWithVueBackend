@@ -1,6 +1,6 @@
 {
-  "name": "passageType",
-  "plural": "passageTypes",
+  "name": "resume",
+  "plural": "resumes",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -11,13 +11,33 @@
     "AddUserInfo": true
   },
   "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
     "name": {
       "type": "string",
       "required": true
     },
-    "bDisabled": {
-      "type": "boolean",
-      "default": false
+    "birthday": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "wechat": {
+      "type": "string"
+    },
+    "qq": {
+      "type": "string"
+    },
+    "selfAssignment": {
+      "type": "string",
+      "dataType": "text"
     }
   },
   "validations": [],

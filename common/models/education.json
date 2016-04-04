@@ -1,6 +1,6 @@
 {
-  "name": "passageType",
-  "plural": "passageTypes",
+  "name": "education",
+  "plural": "educations",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -11,13 +11,23 @@
     "AddUserInfo": true
   },
   "properties": {
+    "from": {
+      "type": "string"
+    },
+    "to": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "required": true
     },
-    "bDisabled": {
-      "type": "boolean",
-      "default": false
+    "major": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "dataType": "text"
     }
   },
   "validations": [],
@@ -31,6 +41,11 @@
       "type": "belongsTo",
       "model": "userModel",
       "foreignKey": "lastUpdatedById"
+    },
+    "resume": {
+      "type": "belongsTo",
+      "model": "resume",
+      "foreignKey": "resumeId"
     }
   },
   "acls": [

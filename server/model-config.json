@@ -44,5 +44,21 @@
   "passageType": {
     "dataSource": "mysql",
     "public": true
+  },
+  "education": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "resume": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "job": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "project": {
+    "dataSource": "mysql",
+    "public": true
   }
 }

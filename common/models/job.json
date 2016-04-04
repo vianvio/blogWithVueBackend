@@ -1,6 +1,6 @@
 {
-  "name": "passageType",
-  "plural": "passageTypes",
+  "name": "job",
+  "plural": "jobs",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -11,13 +11,24 @@
     "AddUserInfo": true
   },
   "properties": {
+    "from": {
+      "type": "string"
+    },
+    "to": {
+      "type": "string"
+    },
     "name": {
       "type": "string",
       "required": true
     },
-    "bDisabled": {
-      "type": "boolean",
-      "default": false
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "dataType": "text"
     }
   },
   "validations": [],
@@ -31,6 +42,11 @@
       "type": "belongsTo",
       "model": "userModel",
       "foreignKey": "lastUpdatedById"
+    },
+    "resume": {
+      "type": "belongsTo",
+      "model": "resume",
+      "foreignKey": "resumeId"
     }
   },
   "acls": [

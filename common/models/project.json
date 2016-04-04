@@ -1,0 +1,80 @@
+{
+  "name": "project",
+  "plural": "projects",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "mixins": {
+    "TimeStamp": true,
+    "AddUserInfo": true
+  },
+  "properties": {
+    "from": {
+      "type": "string"
+    },
+    "to": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "technology": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "dataType": "text"
+    },
+    "responsibility": {
+      "type": "string",
+      "required": true,
+      "dataType": "text"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "owner": {
+      "type": "belongsTo",
+      "model": "userModel",
+      "foreignKey": "ownerId"
+    },
+    "lastUpdatedBy": {
+      "type": "belongsTo",
+      "model": "userModel",
+      "foreignKey": "lastUpdatedById"
+    },
+    "resume": {
+      "type": "belongsTo",
+      "model": "resume",
+      "foreignKey": "resumeId"
+    }
+  },
+  "acls": [{
+    "accessType": "*",
+    "principalType": "ROLE",
+    "principalId": "$everyone",
+    "permission": "DENY"
+  }, {
+    "accessType": "*",
+    "principalType": "ROLE",
+    "principalId": "$authenticated",
+    "permission": "ALLOW"
+  }, {
+    "accessType": "EXECUTE",
+    "principalType": "ROLE",
+    "principalId": "$everyone",
+    "permission": "ALLOW",
+    "property": "find"
+  }, {
+    "accessType": "EXECUTE",
+    "principalType": "ROLE",
+    "principalId": "$everyone",
+    "permission": "ALLOW",
+    "property": "findById"
+  }],
+  "methods": {}
+}
