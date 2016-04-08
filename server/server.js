@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var app = module.exports = loopback();
 // add another static folder
-// app.use(loopback.static(path.resolve(__dirname, '../client/venderMissed')));
+app.use(loopback.static(path.resolve(__dirname, './uploads')));
 // app.use(function (req, res, next){
 //   // for alipay
 //   if (req.url === '/paymentNotify') {
