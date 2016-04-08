@@ -60,5 +60,17 @@
   "project": {
     "dataSource": "mysql",
     "public": true
+  },
+  "record": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "container": {
+    "dataSource": "projectFile",
+    "public": true
+  },
+  "recordImage": {
+    "dataSource": "mysql",
+    "public": true
   }
 }

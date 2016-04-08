@@ -1,6 +1,6 @@
 {
-  "name": "project",
-  "plural": "projects",
+  "name": "record",
+  "plural": "records",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -11,28 +11,12 @@
     "AddUserInfo": true
   },
   "properties": {
-    "from": {
-      "type": "string"
-    },
-    "to": {
-      "type": "string"
-    },
-    "name": {
+    "content": {
       "type": "string",
-      "required": true
-    },
-    "technology": {
-      "type": "string"
-    },
-    "description": {
-      "type": "string",
-      "required": true,
       "dataType": "text"
     },
-    "responsibility": {
-      "type": "string",
-      "required": true,
-      "dataType": "text"
+    "eventDate": {
+      "type": "date"
     }
   },
   "validations": [],
@@ -46,11 +30,6 @@
       "type": "belongsTo",
       "model": "userModel",
       "foreignKey": "lastUpdatedById"
-    },
-    "resume": {
-      "type": "belongsTo",
-      "model": "resume",
-      "foreignKey": "resumeId"
     }
   },
   "acls": [
