@@ -30,6 +30,11 @@
       "type": "belongsTo",
       "model": "userModel",
       "foreignKey": "lastUpdatedById"
+    },
+    "recordImages": {
+      "type": "hasMany",
+      "model": "recordImage",
+      "foreignKey": "recordId"
     }
   },
   "acls": [
