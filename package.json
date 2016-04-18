@@ -4,7 +4,8 @@
   "main": "server/server.js",
   "scripts": {
     "pretest": "jshint .",
-    "clean": "rm ./client/build/* && rm ./client/index.html"
+    "clean": "rm ./client/build/* && rm ./client/index.html",
+    "start": "forever start -o out.log -e err.log ."
   },
   "dependencies": {
     "body-parser": "^1.15.0",
