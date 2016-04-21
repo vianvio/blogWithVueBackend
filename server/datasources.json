@@ -7,8 +7,8 @@
     "host": "localhost",
     "port": 3306,
     "database": "vBlogDB",
-    "username": "blogAdmin",
-    "password": "Nvane1017",
+    "username": "",
+    "password": "",
     "name": "mysql",
     "connector": "mysql"
   },
